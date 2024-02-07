@@ -108,8 +108,7 @@
     font-family: var(--ff-sans-serif);
     font-size: var(--fs-400);
     color: var(--clr-font-white);
-    background-color: var(--clr-dark-blue);
-    line-height: 1.5;
+   
     min-height: 100vh;
   }
   
@@ -230,8 +229,8 @@
   .text-grey {
     color: var(--clr-font-grey);
   }
-  .text-gold {
-    color: var(--clr-gold);
+  .text-green {
+    color: var(--clr-green);
   }
   
   /* typography */
@@ -308,3 +307,31 @@
     fill: var(--clr-font-white);
     cursor: pointer;
   }
+
+  header {
+    padding: 2em;
+    justify-content: space-between;
+  }
+
+  .hero {
+    background-color: var(--clr-dark-blue);
+  }
+
+  /* bio */
+  .bio {
+    background-color: var(--clr-dark-blue);
+    max-height: 100vh;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 35em) {
+    .bio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2em 25em 2em 25em;
+    }
+  }
+
+
+
+  
