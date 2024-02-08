@@ -142,6 +142,10 @@
   /* ----------------- */
   /* UTILITY CLASSES*/
   /* ----------------- */
+
+  .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, .75rem);
+}
   
   .flex {
     display: flex;
@@ -317,21 +321,39 @@
     background-color: var(--clr-dark-blue);
   }
 
-  /* bio */
-  .bio {
-    background-color: var(--clr-dark-blue);
-    max-height: 100vh;
-    margin: 0 auto;
-  }
 
-  @media (min-width: 35em) {
-    .bio {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 2em 25em 2em 25em;
+/* layouts */
+.main {
+    height: 100vh;
+}
+.grid-container {
+   display: grid;
+   
+   text-align: center;
+   padding-inline: 1rem;
+   padding-bottom: 4rem;
+   place-items: center;
+}
+
+@media (min-width: 45em) {
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
-  }
 
+    .grid-container {
+        text-align: left;
+        column-gap: 2rem;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        place-items: center;
+       
+    }
 
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
 
-  
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+}
