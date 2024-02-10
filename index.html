@@ -82,16 +82,16 @@
       </div>
     </section>
     <section class="main grid-container grid-container--destination bg-light-brown flow">
-      <h1 class="text-grey-dark numbered-title"><span class="text-grey">01</span>Project</h1>
+      <h1 class="text-grey numbered-title">01 <span class="uppercase text-grey-dark">Project</span></h1>
       <picture>
         <img src="assets/jaya-example.jpeg" alt="" />
       </picture>
 
       <!-- tab-list -->
-      <div class="tab-list">
-        <button class="uppercase ff-serif fs-500 text-grey" role="tab">1/3</button>
-        <button class="uppercase ff-serif fs-500 text-grey" role="tab">2/3</button>
-        <button class="uppercase ff-serif fs-500 text-grey" role="tab">3/3</button>
+      <div class="tab-list underline-indicators flex">
+        <button aria-selected="true" aria-controls="core-tab" class="uppercase ff-serif fs-500 text-grey" role="tab">1/3</button>
+        <button aria-selected="false" aria-controls="adelaide-tab" class="uppercase ff-serif fs-500 text-grey" role="tab">2/3</button>
+        <button aria-selected="false" aria-controls="raley-tab" class="uppercase ff-serif fs-500 text-grey" role="tab">3/3</button>
       </div>
       <!-- core -->
       <article class="flow destination-info">
@@ -106,8 +106,8 @@
           accusantium optio ullam nemo consequatur eos? Ad, id!
         </p>
         <div class="flex">
-          <a href="">live</a>
-          <a href="">github</a>
+          <a href="#" class="btn uppercase text-grey">live</a>
+          <a href="#" class="btn uppercase text-grey">github</a>
         </div>
       </article>
     </section>
