@@ -6,7 +6,7 @@
   --clr-dark-blue: #011832;
   --clr-green: #6fdcbf;
   --clr-gold: #d4af37;
-  --clr-light-brown: #f5f5f5;
+  --clr-light-brown: #EDE7DE;
   --clr-light-pink: #fdefff;
   --clr-font-white: #ffffff;
   --clr-font-grey: #818181;
@@ -336,7 +336,7 @@ header {
   place-items: center;
 }
 
-.grid-container--destination {
+.grid-container--portfolio {
   --flow-space: 2rem;
   grid-template-areas:
     "title"
@@ -345,21 +345,21 @@ header {
     "content";
 }
 
-.grid-container--destination > picture {
+.grid-container--portfolio > picture {
   grid-area: image;
-  max-width: 60%;
+  max-width: 100%;
 }
 
-.numbered-title {
+.numbered-title{
   grid-area: title;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
-.grid-container--destination > .tab-list {
+.grid-container--portfolio > .tab-list {
   grid-area: tabs;
 }
 
-.grid-container--destination > .destination-info {
+.grid-container--portfolio > .portfolio-info {
   grid-area: content;
 }
 
@@ -371,7 +371,7 @@ header {
 
   .grid-container {
     text-align: left;
-    column-gap: 2rem;
+    column-gap: 1rem;
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
         1rem,
         1fr
@@ -387,7 +387,7 @@ header {
     grid-column: 3;
   }
 
-  .grid-container--destination {
+  .grid-container--portfolio {
     justify-items: start;
     align-content: start;
     grid-template-areas:
@@ -395,8 +395,17 @@ header {
       ". image tabs ."
       ". image content .";
   }
-}
 
+  .img-wrapper-core img {
+    margin-left: 6.5em;
+  }
+
+  .numbered-title{
+    grid-area: title;
+    padding-top: 2em;
+    margin-left: 4em;
+  }
+}
 
 .underline-indicators > * {
   cursor: pointer;
@@ -405,21 +414,40 @@ header {
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  border-bottom: .2rem solid var(--clr-font-dark-grey) ;
+  border-bottom: 0.2rem solid var(--clr-font-dark-grey);
 }
 
 .underline-indicators > .active,
 .underline-indicators > [aria-selected="true"] {
   color: var(--clr-font-dark-grey);
-  border-bottom: .2rem solid var(--clr-font-dark-grey) ;
+  border-bottom: 0.2rem solid var(--clr-font-dark-grey);
 }
 
 .tab-list {
   gap: 2rem;
 }
 
+/* button */
 .btn {
-  border: .1em solid var(--clr-font-grey);
-  padding: .20em .5em;
-  border-radius: 10%;
+  border: 0.1em solid var(--clr-font-grey);
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+@media (max-width: 45em) {
+  .button-wrapper {
+    margin: 0 auto;
+  }
+}
+
+/* about-me */
+.about-me-section p, .about-me-section h1, .about-me-section a {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.about-me-section p {
+  padding-bottom: 1em;
 }
