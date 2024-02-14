@@ -20,6 +20,8 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="index.css" />
+
+    <script src="tabs.js" defer></script>
   </head>
   <body>
     <section class="hero">
@@ -71,7 +73,7 @@
       </div>
       <div class="right-article">
         <h1 class="ff-serif">Hi, I am Jaya</h1>
-        <h2 class="text-green fs-800">Frontend Developer</h2>
+        <h2 class="text-green fs-800">Frontend Developer.</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi libero
           eligendi at aliquam nam necessitatibus debitis? Obcaecati, aperiam
@@ -81,6 +83,7 @@
         </p>
       </div>
     </section>
+
     <!-- portfolio -->
     <section
       class="main grid-container grid-container--portfolio bg-light-brown flow"
@@ -91,8 +94,14 @@
           >Project</span
         >
       </h1>
-      <picture class="img-wrapper-core d-block">
-        <img src="assets/jaya-example.jpeg" alt="" />
+      <picture id="core-img" class="img-wrapper-core d-block">
+        <img src="assets/core.jpg" alt="core image" />
+      </picture>
+      <picture hidden id="ecommerce-img" class="img-wrapper-core d-block">
+        <img src="assets/jaya-example.jpeg" alt="ecommerce image" />
+      </picture>
+      <picture hidden id="space-img" class="img-wrapper-core d-block">
+        <img src="assets/space.webp" alt="space image" />
       </picture>
 
       <!-- tab-list -->
@@ -102,28 +111,39 @@
           aria-controls="core-tab"
           class="uppercase ff-serif fs-500 text-grey"
           role="tab"
+          tabindex="0"
+          data-image="core-img"
         >
           1/3
         </button>
         <button
           aria-selected="false"
-          aria-controls="adelaide-tab"
+          aria-controls="ecommerce-tab"
           class="uppercase ff-serif fs-500 text-grey"
           role="tab"
+          tabindex="-1"
+          data-image="ecommerce-img"
         >
           2/3
         </button>
         <button
           aria-selected="false"
-          aria-controls="raley-tab"
+          aria-controls="space-tab"
           class="uppercase ff-serif fs-500 text-grey"
           role="tab"
+          tabindex="-1"
+          data-image="space-img"
         >
           3/3
         </button>
       </div>
       <!-- core -->
-      <article class="flow portfolio-info">
+      <article
+        class="flow portfolio-info"
+        id="core-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
           core
         </h2>
@@ -147,7 +167,63 @@
           </div>
         </div>
       </article>
+
+      <!-- ecommerce -->
+      <article
+        class="flow portfolio-info"
+        id="eccomerce-tab"
+        tabindex="0"
+        role="tabpanel"
+        hidden
+      >
+        <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
+          core
+        </h2>
+        <p class="text-grey">
+          this is ecommerce pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          consectetur odit distinctio deserunt voluptatibus laboriosam, fugiat
+          cumque totam quisquam ad natus eligendi adipisci atque, architecto
+          harum molestias facere odio corporis.
+        </p>
+        <div class="flex">
+          <div class="button-wrapper flex">
+            <a href="#" class="btn uppercase text-grey d-block ff-serif"
+              >live</a
+            >
+            <a href="#" class="btn uppercase text-grey d-block ff-serif"
+              >github</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <!-- space -->
+      <article hidden class="flow portfolio-info" id="space-tab" tabindex="-1" role="tabpanel">
+        <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
+          core
+        </h2>
+        <p class="text-grey">
+          This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil amet
+          dolores quibusdam neque repellendus nesciunt commodi sunt, enim harum
+          officia, dignissimos, velit beatae! Non, quam? Dolore sint cum
+          voluptatem quisquam blanditiis, quibusdam pariatur accusantium veniam
+          eaque temporibus beatae culpa officia repudiandae accusamus excepturi!
+          Impedit nisi dignissimos et. Enim velit molestias soluta tempora
+          accusantium optio ullam nemo consequatur eos? Ad, id!
+        </p>
+        <div class="flex">
+          <div class="button-wrapper flex">
+            <a href="#" class="btn uppercase text-grey d-block ff-serif"
+              >live</a
+            >
+            <a href="#" class="btn uppercase text-grey d-block ff-serif"
+              >github</a
+            >
+          </div>
+        </div>
+      </article>
     </section>
+
     <!-- playground -->
     <section
       class="main grid-container grid-container--portfolio bg-green flow"
@@ -230,20 +306,20 @@
           repellendus ducimus, placeat fugiat quisquam at adipisci nobis
           deleniti natus voluptatum. Corrupti laborum minima fugiat impedit
           facilis iure suscipit aliquam hic illo! Ipsa minus facere, voluptate
-          rem quisquam facilis. 
+          rem quisquam facilis.
         </p>
-        <p class="text-grey">  Asperiores id est eius quae vel corrupti
-          repellat dolor aperiam nemo itaque, aliquid inventore rem.
-          Exercitationem sequi facere ipsam. Est quam sapiente distinctio
-          consectetur id dignissimos consequatur! Necessitatibus exercitationem,
-          quod laudantium autem vitae iure nostrum quia maiores dolorem at
-          pariatur commodi a vel quas tenetur asperiores eius cupiditate aperiam
-          quaerat explicabo vero?</p>
+        <p class="text-grey">
+          Asperiores id est eius quae vel corrupti repellat dolor aperiam nemo
+          itaque, aliquid inventore rem. Exercitationem sequi facere ipsam. Est
+          quam sapiente distinctio consectetur id dignissimos consequatur!
+          Necessitatibus exercitationem, quod laudantium autem vitae iure
+          nostrum quia maiores dolorem at pariatur commodi a vel quas tenetur
+          asperiores eius cupiditate aperiam quaerat explicabo vero?
+        </p>
       </article>
-        <a href="#" class="btn uppercase text-grey d-block ff-serif"
-          >get in touch</a
-        >
-      
+      <a href="#" class="btn uppercase text-grey d-block ff-serif"
+        >get in touch</a
+      >
     </section>
   </body>
 </html>
