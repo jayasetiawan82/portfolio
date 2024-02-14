@@ -345,9 +345,10 @@ header {
     "content";
 }
 
+
 .grid-container--portfolio > picture {
   grid-area: image;
-  max-width: 100%;
+  max-width: 60%;
 }
 
 .numbered-title{

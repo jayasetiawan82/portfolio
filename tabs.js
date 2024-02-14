@@ -32,6 +32,8 @@ function changeTabFocus(e) {
   }
 }
 
+// functions
+
 function changeTabPanel(e) {
   const targetTab = e.target;
   const targetPanel = targetTab.getAttribute("aria-controls");
