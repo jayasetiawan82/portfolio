@@ -115,7 +115,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* make form element easier to work with */
@@ -453,6 +452,3 @@ header {
   padding-bottom: 1em;
 }
 
-.hidden {
-  display: none;
-}
