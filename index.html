@@ -20,8 +20,7 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="index.css" />
-
-    <script src="tabs.js" defer></script>
+    <script src="tabs.js"></script>
   </head>
   <body>
     <section class="hero">
@@ -65,7 +64,7 @@
         </div>
       </header>
     </section>
-    <section class="main grid-container grid-container--home bg-dark-blue">
+    <section id="main" class=" grid-container grid-container--home bg-dark-blue">
       <div class="left-img">
         <div>
           <img src="assets/jaya-example.jpeg" alt=" potrait-img" />
@@ -94,17 +93,18 @@
       </h1>
 
       <picture id="core-img" class="img-wrapper-core">
-        <img src="assets/core.jpg" alt="core image" />
+        <source srcset="assets/core.jpg" type="image">
+        <img src="assets/image-europa.png" alt="core image" />
       </picture>
       <picture hidden id="ecommerce-img" class="img-wrapper-core">
-        <img src="assets/jaya-example.jpeg" alt="ecommerce image" />
+        <img src="assets/image-moon.png" alt="ecommerce image" />
       </picture>
       <picture hidden id="space-img" class="img-wrapper-core" >
-        <img src="assets/core.jpg" alt="space image" />
+        <img src="assets/image-titan.png" alt="space image" />
       </picture>
 
       <!-- tab-list -->
-      <div class="tab-list underline-indicators flex">
+      <div class="tab-list underline-indicators flex" role="tablist">
         <button
           aria-selected="true"
           aria-controls="core-tab"
@@ -176,7 +176,7 @@
         hidden
       >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
-          core
+          ecommerce
         </h2>
         <p class="text-grey">
           this is ecommerce pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
@@ -199,7 +199,7 @@
       <!-- space -->
       <article hidden class="flow portfolio-info" id="space-tab" tabindex="-1" role="tabpanel">
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
-          core
+          space
         </h2>
         <p class="text-grey">
           This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil amet

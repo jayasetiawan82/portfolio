@@ -453,3 +453,6 @@ header {
   padding-bottom: 1em;
 }
 
+.hidden {
+  display: none;
+}
