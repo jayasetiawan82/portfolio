@@ -115,7 +115,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* make form element easier to work with */
@@ -304,7 +303,6 @@ select {
 /* COMPONENTS*/
 /* ----------------- */
 
-
 /* header */
 button {
   background: transparent;
@@ -398,17 +396,14 @@ header {
       ". image content .";
   }
 
-
+  .img-wrapper-core img {
+    margin-left: 6.5em;
+  }
 
   .numbered-title{
     grid-area: title;
     padding-top: 2em;
     margin-left: 4em;
-  }
-
-
-  .img-wrapper {
-    margin-left: 50px;
   }
 }
 
