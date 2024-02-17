@@ -29,11 +29,7 @@
           <img src="assets/logo.png" alt="logo" />
         </div>
         <div>
-          <button
-            class="sidebar-toggle"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
+          <button class="sidebar-toggle">
             <svg class="hamburger" viewbox="0 0 100 100" width="60">
               <rect
                 class="line top"
@@ -61,10 +57,28 @@
               ></rect>
             </svg>
           </button>
+
+          <!-- sidebar -->
+          <aside class="sidebar">
+            <div>
+              <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="links">
+              <li><a href="#">portfolio</a></li>
+              <li><a href="#">Playground</a></li>
+              <li><a href="#">about me</a></li>
+            </ul>
+            <h1>say hello</h1>
+            <a href="#"> jayasetiawan28@gmail.com</a>
+           
+
+          </aside>
         </div>
       </header>
     </section>
-    <section id="main" class=" grid-container grid-container--home bg-dark-blue">
+    <section id="main" class="grid-container grid-container--home bg-dark-blue">
       <div class="left-img">
         <div>
           <img src="assets/jaya-example.jpeg" alt=" potrait-img" />
@@ -84,7 +98,9 @@
     </section>
 
     <!-- portfolio -->
-    <section class="main grid-container grid-container--portfolio bg-light-brown flow">
+    <section
+      class="main grid-container grid-container--portfolio bg-light-brown flow"
+    >
       <h1 class="text-grey numbered-title">
         01
         <span class="letter-spacing-1 uppercase text-grey-dark ff-serif"
@@ -101,13 +117,44 @@
       </picture>
 
       <picture hidden id="space-img" class="img-wrapper">
-        <img src="assets/image-titan.png" alt="">
+        <img src="assets/image-titan.png" alt="" />
       </picture>
 
-      <div class="tab-list underline-indicators flex" role="tablist" id="project-tablist">
-        <button aria-selected="true" aria-controls="core-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="0" data-image="core-img">1/3</button>
-        <button aria-selected="false" aria-controls="ecommerce-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="-1" data-image="ecommerce-img">2/3</button>
-        <button aria-selected="false" aria-controls="space-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="-1" data-image="space-img">3/3</button>
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        id="project-tablist"
+      >
+        <button
+          aria-selected="true"
+          aria-controls="core-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="0"
+          data-image="core-img"
+        >
+          1/3
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="ecommerce-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="-1"
+          data-image="ecommerce-img"
+        >
+          2/3
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="space-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="-1"
+          data-image="space-img"
+        >
+          3/3
+        </button>
       </div>
       <!-- core -->
       <article
@@ -141,15 +188,22 @@
       </article>
 
       <!-- ecommerce -->
-      <article hidden class="flow portfolio-info" id="ecommerce-tab" tabindex="0" role="tabpanel">
+      <article
+        hidden
+        class="flow portfolio-info"
+        id="ecommerce-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
           ecommerce
         </h2>
         <p class="text-grey">
-          this is ecommerce pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          consectetur odit distinctio deserunt voluptatibus laboriosam, fugiat
-          cumque totam quisquam ad natus eligendi adipisci atque, architecto
-          harum molestias facere odio corporis.
+          this is ecommerce pageLorem ipsum dolor sit amet consectetur
+          adipisicing elit. Maiores consectetur odit distinctio deserunt
+          voluptatibus laboriosam, fugiat cumque totam quisquam ad natus
+          eligendi adipisci atque, architecto harum molestias facere odio
+          corporis.
         </p>
         <div class="flex">
           <div class="button-wrapper flex">
@@ -164,18 +218,24 @@
       </article>
 
       <!-- space -->
-      <article hidden class="flow portfolio-info" id="space-tab" tabindex="-1" role="tabpanel">
+      <article
+        hidden
+        class="flow portfolio-info"
+        id="space-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
           space
         </h2>
         <p class="text-grey">
-          This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil amet
-          dolores quibusdam neque repellendus nesciunt commodi sunt, enim harum
-          officia, dignissimos, velit beatae! Non, quam? Dolore sint cum
-          voluptatem quisquam blanditiis, quibusdam pariatur accusantium veniam
-          eaque temporibus beatae culpa officia repudiandae accusamus excepturi!
-          Impedit nisi dignissimos et. Enim velit molestias soluta tempora
-          accusantium optio ullam nemo consequatur eos? Ad, id!
+          This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Nihil amet dolores quibusdam neque repellendus nesciunt commodi
+          sunt, enim harum officia, dignissimos, velit beatae! Non, quam? Dolore
+          sint cum voluptatem quisquam blanditiis, quibusdam pariatur
+          accusantium veniam eaque temporibus beatae culpa officia repudiandae
+          accusamus excepturi! Impedit nisi dignissimos et. Enim velit molestias
+          soluta tempora accusantium optio ullam nemo consequatur eos? Ad, id!
         </p>
         <div class="flex">
           <div class="button-wrapper flex">
@@ -191,7 +251,9 @@
     </section>
 
     <!-- playground -->
-    <section class="main grid-container grid-container--portfolio bg-green flow">
+    <section
+      class="main grid-container grid-container--portfolio bg-green flow"
+    >
       <h1 class="text-grey numbered-title">
         02
         <span class="letter-spacing-1 uppercase text-grey-dark ff-serif"
@@ -208,14 +270,45 @@
       </picture>
 
       <picture hidden id="playground-img-3">
-        <img src="assets/image-titan.png" alt="">
+        <img src="assets/image-titan.png" alt="" />
       </picture>
 
       <!-- tab-list -->
-      <div class="tab-list underline-indicators flex" role="tablist" id="playground-tablist">
-        <button aria-selected="true" aria-controls="playground-1-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="0" data-image="playground-img-1">1/3</button>
-        <button aria-selected="false" aria-controls="playground-2-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="-1" data-image="playground-img-2">2/3</button>
-        <button aria-selected="false" aria-controls="playground-3-tab" class="uppercase ff-serif fs-500 text-grey" role="tab" tabindex="-1" data-image="playground-img-3">3/3</button>
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        id="playground-tablist"
+      >
+        <button
+          aria-selected="true"
+          aria-controls="playground-1-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="0"
+          data-image="playground-img-1"
+        >
+          1/3
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="playground-2-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="-1"
+          data-image="playground-img-2"
+        >
+          2/3
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="playground-3-tab"
+          class="uppercase ff-serif fs-500 text-grey"
+          role="tab"
+          tabindex="-1"
+          data-image="playground-img-3"
+        >
+          3/3
+        </button>
       </div>
       <!-- core -->
       <article
@@ -249,15 +342,22 @@
       </article>
 
       <!-- ecommerce -->
-      <article hidden class="flow portfolio-info" id="playground-2-tab" tabindex="-1" role="tabpanel">
+      <article
+        hidden
+        class="flow portfolio-info"
+        id="playground-2-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
           ecommerce
         </h2>
         <p class="text-grey">
-          this is ecommerce pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          consectetur odit distinctio deserunt voluptatibus laboriosam, fugiat
-          cumque totam quisquam ad natus eligendi adipisci atque, architecto
-          harum molestias facere odio corporis.
+          this is ecommerce pageLorem ipsum dolor sit amet consectetur
+          adipisicing elit. Maiores consectetur odit distinctio deserunt
+          voluptatibus laboriosam, fugiat cumque totam quisquam ad natus
+          eligendi adipisci atque, architecto harum molestias facere odio
+          corporis.
         </p>
         <div class="flex">
           <div class="button-wrapper flex">
@@ -272,18 +372,24 @@
       </article>
 
       <!-- space -->
-      <article hidden class="flow portfolio-info" id="playground-3-tab" tabindex="-1" role="tabpanel">
+      <article
+        hidden
+        class="flow portfolio-info"
+        id="playground-3-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
         <h2 class="text-grey-dark uppercase ff-serif fs-600 letter-spacing-1">
           space
         </h2>
         <p class="text-grey">
-          This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil amet
-          dolores quibusdam neque repellendus nesciunt commodi sunt, enim harum
-          officia, dignissimos, velit beatae! Non, quam? Dolore sint cum
-          voluptatem quisquam blanditiis, quibusdam pariatur accusantium veniam
-          eaque temporibus beatae culpa officia repudiandae accusamus excepturi!
-          Impedit nisi dignissimos et. Enim velit molestias soluta tempora
-          accusantium optio ullam nemo consequatur eos? Ad, id!
+          This is SPACE Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Nihil amet dolores quibusdam neque repellendus nesciunt commodi
+          sunt, enim harum officia, dignissimos, velit beatae! Non, quam? Dolore
+          sint cum voluptatem quisquam blanditiis, quibusdam pariatur
+          accusantium veniam eaque temporibus beatae culpa officia repudiandae
+          accusamus excepturi! Impedit nisi dignissimos et. Enim velit molestias
+          soluta tempora accusantium optio ullam nemo consequatur eos? Ad, id!
         </p>
         <div class="flex">
           <div class="button-wrapper flex">
