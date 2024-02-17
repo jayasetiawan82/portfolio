@@ -97,6 +97,8 @@ p {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -306,7 +308,7 @@ select {
 /* header */
 button {
   background: transparent;
-  border-radius: 1rem solid;
+  border-radius: 1em solid;
   border: none;
 }
 .hamburger {
@@ -452,3 +454,35 @@ header {
   padding-bottom: 1em;
 }
 
+/* sidebar */
+.close-btn {
+  font-size: 3rem;
+  background: transparent;
+  border-color: transparent;
+  color: #011832;
+  cursor: pointer;
+}
+
+.links a {
+  display: block;
+  padding: 1.5em 0;
+  color: #011832;
+}
+
+.links a:hover {
+  background-color: #fec0e9;
+  padding-left: 1.75rem;
+}
+.sidebar {
+  position: fixed;
+  top: 2em;
+  right: 0;
+  height: 50%;
+  transition: var(--transition);
+  transform: translateX(150%); /* Add this line */
+  padding: 1em;
+  background-color: white;
+}
+.show-sidebar {
+  transform: translate(0);
+} 

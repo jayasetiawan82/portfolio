@@ -21,6 +21,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="index.css" />
     <script src="tabs.js" defer></script>
+    <script src="sidebar.js" defer></script>
   </head>
   <body>
     <section class="hero">
@@ -30,7 +31,7 @@
         </div>
         <div>
           <button class="sidebar-toggle">
-            <svg class="hamburger" viewbox="0 0 100 100" width="60">
+            <svg class="hamburger" viewBox="0 0 100 100" width="60">
               <rect
                 class="line top"
                 width="80"
@@ -59,21 +60,19 @@
           </button>
 
           <!-- sidebar -->
-          <aside class="sidebar">
-            <div>
+          <aside class="sidebar bg-light-brown">
+            <div class="sidebar-header">
               <button class="close-btn">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
             <ul class="links">
-              <li><a href="#">portfolio</a></li>
-              <li><a href="#">Playground</a></li>
-              <li><a href="#">about me</a></li>
+              <li><a href="#" class="capitalized">portfolio</a></li>
+              <li><a href="#" class="capitalized">Playground</a></li>
+              <li><a href="#" class="capitalized">about me</a></li>
             </ul>
-            <h1>say hello</h1>
+            <h1 class="text-grey uppercase">say hello</h1>
             <a href="#"> jayasetiawan28@gmail.com</a>
-           
-
           </aside>
         </div>
       </header>
