@@ -227,6 +227,10 @@ select {
   background-color: var(--clr-light-pink);
 }
 
+.text-dark-blue {
+  color: var(--clr-dark-blue);
+}
+
 .text-white {
   color: var(--clr-font-white);
 }
@@ -325,6 +329,17 @@ header {
   background-color: var(--clr-dark-blue);
 }
 
+.logo img {
+  max-width: 3.5em;
+}
+
+.sidebar-toggle {
+  margin-top: -1em;
+}
+
+.sidebar-toggle:hover {
+  
+}
 /* layouts */
 #main {
   height: 100vh;
@@ -470,19 +485,31 @@ header {
 }
 
 .links a:hover {
-  background-color: #fec0e9;
+  background-color: var(--clr-green);
   padding-left: 1.75rem;
+
 }
 .sidebar {
   position: fixed;
-  top: 2em;
+  top: 0;
   right: 0;
-  height: 50%;
+  height: 100%;
   transition: var(--transition);
-  transform: translateX(150%); /* Add this line */
-  padding: 1em;
+  transform: translateX(100%); /* Add this line */
+  padding: 2em;
   background-color: white;
 }
 .show-sidebar {
   transform: translate(0);
 } 
+
+aside a {
+  padding-top: 1em;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
