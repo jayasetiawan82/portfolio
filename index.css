@@ -6,7 +6,7 @@
   --clr-dark-blue: #011832;
   --clr-green: #6fdcbf;
   --clr-gold: #d4af37;
-  --clr-light-brown: #EDE7DE;
+  --clr-light-brown: #ede7de;
   --clr-light-pink: #fdefff;
   --clr-font-white: #ffffff;
   --clr-font-grey: #818181;
@@ -323,14 +323,7 @@ button {
 header {
   padding: 2em;
   justify-content: space-between;
-}
-
-
-
-
-
-.sidebar-toggle {
-  margin-top: ;
+  z-index: 1000;
 }
 
 /* hero */
@@ -338,25 +331,28 @@ header {
   position: relative;
 }
 .img-wrapper-profile:after {
-position: absolute;
-content: '';
-right: 1.2em;
-top: 1.6em;
-width: 100%;
-height: 100%;
-border: var(--clr-green) solid 4px;
-padding: 5.5em 6.5em;
-z-index:1;
+  position: absolute;
+  content: "";
+  right: 1.2em;
+  top: 1.6em;
+  width: 100%;
+  height: 100%;
+  border: var(--clr-green) solid 4px;
+  padding: 5.5em 6.5em;
+  z-index: 1;
 }
 
 .logo img {
   max-width: 3.5em;
   z-index: 100;
 }
+
+.white-sidebar-toggle .hamburger {
+  fill: white;
+}
 /* layouts */
 #main {
-  height: 100%;
-  position: relative;
+  height: 100vh;
 }
 
 .main {
@@ -380,13 +376,12 @@ z-index:1;
     "content";
 }
 
-
 .grid-container--portfolio > picture {
   grid-area: image;
   max-width: 60%;
 }
 
-.numbered-title{
+.numbered-title {
   grid-area: title;
   padding-top: 2em;
 }
@@ -400,7 +395,6 @@ z-index:1;
 }
 
 @media (min-width: 45em) {
-
   .img-wrapper {
     margin-left: 3em;
   }
@@ -441,7 +435,7 @@ z-index:1;
     margin-left: 6.5em;
   }
 
-  .numbered-title{
+  .numbered-title {
     grid-area: title;
     padding-top: 2em;
     margin-left: 4em;
@@ -483,7 +477,9 @@ z-index:1;
 }
 
 /* about-me */
-.about-me-section p, .about-me-section h1, .about-me-section a {
+.about-me-section p,
+.about-me-section h1,
+.about-me-section a {
   text-align: center;
   max-width: 50%;
   margin: 0 auto;
@@ -491,6 +487,11 @@ z-index:1;
 
 .about-me-section p {
   padding-bottom: 1em;
+}
+
+article .about-content {
+  max-width: 30em;
+  padding-inline: 2em;
 }
 
 /* sidebar */
@@ -511,7 +512,6 @@ z-index:1;
 .links a:hover {
   background-color: var(--clr-green);
   padding-left: 1.75rem;
-
 }
 .sidebar {
   position: fixed;
@@ -526,7 +526,7 @@ z-index:1;
 }
 .show-sidebar {
   transform: translate(0);
-} 
+}
 
 aside a {
   padding-top: 1em;
@@ -539,11 +539,11 @@ aside a {
   width: 100%;
 }
 
-/* spaes */
+/* shape */
 /* hero */
 .Rectangle-2 {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   right: 10%;
   width: 3em;
 }
@@ -551,7 +551,7 @@ aside a {
 .ellipse {
   position: absolute;
   top: 10em;
- right: 5em;
+  right: 5em;
   width: 3em;
 }
 
@@ -581,13 +581,13 @@ aside a {
   width: 8em;
   position: absolute;
   left: 7em;
-  top: 2em;
+  top: 5em;
 }
 
 .ellipse-linear-3 {
   width: 3em;
   position: absolute;
-  left: 7em;
+  left: 8em;
   bottom: 8em;
 }
 
@@ -662,4 +662,30 @@ aside a {
   position: absolute;
   left: 7em;
   transform: rotate(25deg);
+}
+
+@media (max-width: 1282px) {
+  .Rectangle-2,
+  .ellipse,
+  .Rectangle,
+  .triangle,
+  .ellipse-linear-1,
+  .ellipse-linear-2,
+  .ellipse-linear-3,
+  .ellipse-linear-4,
+  .triangle-linear-1,
+  .triangle-linear-2,
+  .triangle-linear-3,
+  .triangle-linear-4,
+  .rectangular-linear-1,
+  .rectangular-linear-2,
+  .rectangular-linear-3,
+  .rectangular-linear-4 {
+    display: none;
+  }
+}
+
+.copyright p {
+  text-align: center;
+  padding: .5em;
 }
