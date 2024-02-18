@@ -325,9 +325,7 @@ header {
   justify-content: space-between;
 }
 
-.hero {
-  background-color: var(--clr-dark-blue);
-}
+
 
 
 
@@ -340,14 +338,15 @@ header {
   position: relative;
 }
 .img-wrapper-profile:after {
-position: inherit;
+position: absolute;
 content: '';
-right: 30px;
-top: -5.5em;
+right: 1.2em;
+top: 1.6em;
 width: 100%;
 height: 100%;
 border: var(--clr-green) solid 4px;
 padding: 5.5em 6.5em;
+z-index:1;
 }
 
 .logo img {
@@ -355,9 +354,14 @@ padding: 5.5em 6.5em;
   z-index: 100;
 }
 /* layouts */
-
 #main {
+  height: 100%;
+  position: relative;
+}
+
+.main {
   height: 100vh;
+  position: relative;
 }
 .grid-container {
   display: grid;
@@ -533,4 +537,129 @@ aside a {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+/* spaes */
+/* hero */
+.Rectangle-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 3em;
+}
+
+.ellipse {
+  position: absolute;
+  top: 10em;
+ right: 5em;
+  width: 3em;
+}
+
+.Rectangle {
+  position: absolute;
+  left: 5em;
+  top: 10em;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 3em;
+  left: 9em;
+  width: 4em;
+}
+
+/* ellipse for project page */
+
+.ellipse-linear-1 {
+  width: 5em;
+  position: absolute;
+  right: 7em;
+  top: 2em;
+}
+
+.ellipse-linear-2 {
+  width: 8em;
+  position: absolute;
+  left: 7em;
+  top: 2em;
+}
+
+.ellipse-linear-3 {
+  width: 3em;
+  position: absolute;
+  left: 7em;
+  bottom: 8em;
+}
+
+.ellipse-linear-4 {
+  width: 6em;
+  position: absolute;
+  right: 7em;
+  bottom: 6em;
+}
+
+/* triangle for playground section */
+.triangle-linear-1 {
+  width: 6em;
+  bottom: 5em;
+  position: absolute;
+  right: 7em;
+  transform: rotate(45deg);
+}
+
+.triangle-linear-2 {
+  width: 6em;
+  top: 5em;
+  position: absolute;
+  right: 7em;
+  transform: rotate(50deg);
+}
+
+.triangle-linear-3 {
+  width: 8em;
+  bottom: 5em;
+  position: absolute;
+  left: 7em;
+  transform: rotate(90deg);
+}
+
+.triangle-linear-4 {
+  width: 9em;
+  top: 5em;
+  position: absolute;
+  left: 7em;
+  transform: rotate(130deg);
+}
+
+/* shape for about me section */
+.rectangular-linear-1 {
+  width: 4em;
+  bottom: 5em;
+  position: absolute;
+  right: 20em;
+  transform: rotate(-25deg);
+}
+
+.rectangular-linear-2 {
+  width: 5em;
+  bottom: 5em;
+  position: absolute;
+  left: 14em;
+  transform: rotate(-25deg);
+}
+
+.rectangular-linear-3 {
+  width: 8em;
+  top: 3em;
+  position: absolute;
+  right: 7em;
+  transform: rotate(-25deg);
+}
+
+.rectangular-linear-4 {
+  width: 9em;
+  top: 5em;
+  position: absolute;
+  left: 7em;
+  transform: rotate(25deg);
 }
